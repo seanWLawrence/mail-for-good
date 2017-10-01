@@ -15,8 +15,8 @@ canonifyurls = true
 	repo_url = "https://github.com/freeCodeCamp/mail-for-good"
 
 	version = "1.0.0"
-	logo = "/logo.png"
-	favicon = "/logo.png"
+	logo = "logo.png"
+	favicon = "logo.png"
 
 	permalink = "#"
 
