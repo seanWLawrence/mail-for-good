@@ -35,7 +35,7 @@ canonifyurls = true
 
 [social]
 	twitter = "freeCodeCamp"
-	github  = "freeCodeCamp"
+	github  = "freeCodeCamp/mail-for-good"
 
 
 [[menu.main]]

@@ -450,35 +450,35 @@
 
 @supports (-webkit-appearance:none) {
     .palette-primary-light-green {
-        background: #7cb342
+        background: darkgreen
     }
 }
 
 .palette-primary-light-green .footer,
 .palette-primary-light-green .header {
-    background: #7cb342
+    background: darkgreen
 }
 
 .palette-primary-light-green .drawer .toc a.current,
 .palette-primary-light-green .drawer .toc a:focus,
 .palette-primary-light-green .drawer .toc a:hover {
-    color: #7cb342
+    color: darkgreen
 }
 
 .palette-primary-light-green .drawer .anchor a {
-    border-left: 2px solid #7cb342
+    border-left: 2px solid darkgreen
 }
 
 .ios.standalone .palette-primary-light-green .article {
-    background: -webkit-linear-gradient(top, #fff 50%, #7cb342 0);
-    background: linear-gradient(180deg, #fff 50%, #7cb342 0)
+    background: -webkit-linear-gradient(top, #fff 50%, darkgreen 0);
+    background: linear-gradient(180deg, #fff 50%, darkgreen 0)
 }
 
 .palette-primary-light-green .article a,
 .palette-primary-light-green .article code,
 .palette-primary-light-green .article h1,
 .palette-primary-light-green .article h2 {
-    color: #7cb342
+    color: darkgreen
 }
 
 .palette-primary-light-green .article .headerlink {
@@ -490,7 +490,7 @@
 }
 
 .palette-primary-light-green .results .meta {
-    background: #7cb342
+    background: darkgreen
 }
 
 @supports (-webkit-appearance:none) {
@@ -1032,10 +1032,10 @@
         background: #009688
     }
     .palette-primary-green .project {
-        background: #259b24
+        background: darkgreen
     }
     .palette-primary-light-green .project {
-        background: #7cb342
+        background: darkgreen
     }
     .palette-primary-lime .project {
         background: #c0ca33
