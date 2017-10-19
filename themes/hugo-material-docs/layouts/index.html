@@ -23,6 +23,9 @@
 	</div>
 
 	<article class="article">
+			<div id="modal-wrap">
+			<div id="modal"></div>
+		</div>
 		<div class="wrapper">
 			{{ range where .Site.Pages "Type" "index" }}
 				<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
