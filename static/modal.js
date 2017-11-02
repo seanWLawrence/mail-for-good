@@ -31,15 +31,9 @@ function closeListener() {
 images.forEach(function(image) {
     image.addEventListener('click',
         function() {
-            console.log('start')
             var src = this.getAttribute('src')
-            console.log(2, src)
             modalImage.setAttribute('src', src)
-            console.log(3)
-            openModal()
-            console.log('open')
+            modalWrap.style.display = 'flex'
             closeListener()
-            console.log('end close')
-
         })
 })
