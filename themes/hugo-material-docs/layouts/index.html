@@ -24,7 +24,11 @@
 
 	<article class="article">
 			<div id="modal-wrap">
-			<div id="modal"></div>
+			<div id="modal">
+				<img id="modal-image" />
+				<button id="modal-close-button">X</button>
+
+			</div>
 		</div>
 		<div class="wrapper">
 			{{ range where .Site.Pages "Type" "index" }}
@@ -48,5 +52,5 @@
 		</div>
 	</div>
 </main>
-
+<script type="text/javascript" src='/modal.js'></script>
 {{ partial "footer_js" . }}

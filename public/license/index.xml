@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Licenses on Mail For Good</title>
-    <link>https://mail-for-good.github.io/license/</link>
+    <link>/license/</link>
     <description>Recent content in Licenses on Mail For Good</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Sep 2017 16:55:45 -0500</lastBuildDate>
     
-	<atom:link href="https://mail-for-good.github.io/license/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/license/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>License</title>
-      <link>https://mail-for-good.github.io/license/</link>
+      <link>/license/</link>
       <pubDate>Sat, 30 Sep 2017 16:55:45 -0500</pubDate>
       
-      <guid>https://mail-for-good.github.io/license/</guid>
+      <guid>/license/</guid>
       <description>Copyright &amp;copy; 2017, freeCodeCamp.
 This computer software is licensed under the BSD-3-Clause.</description>
     </item>
