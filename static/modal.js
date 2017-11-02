@@ -1,6 +1,6 @@
 
 function getId(id) {
-	return document.getElementById(id)
+    return document.getElementById(id)
 }
 
 function getClasses(className) {
@@ -28,12 +28,16 @@ function closeListener() {
         )
 }
 
+function addSrc(src) {
+    return modalImage.setAttribute('src', src)
+}
+
 images.forEach(function(image) {
     image.addEventListener('click',
         function() {
             var src = this.getAttribute('src')
-            modalImage.setAttribute('src', src)
-            modalWrap.style.display = 'flex'
+            addSrc(src)
+            openModal()
             closeListener()
         })
 })
