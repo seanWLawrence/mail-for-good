@@ -28,18 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     )
 
-    //add src/link to image
+ //add src/link to image
     function addSrc(src) {
         return modalImage.setAttribute('src', src)
     }
   
     //add event listner to all images with class='images'
-    images.forEach(link => 
-        link.addEventListener('click', function(e){
-            openModal()
+    images.forEach(function(link) { 
+        link.addEventListener('click', function(e) {
             addSrc(e.currentTarget.getAttribute('src'))
-        })
-    )
+            openModal()
+        })             
+    }) 
   
     //end 
 })
