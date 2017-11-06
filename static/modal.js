@@ -1,23 +1,15 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     //start once page is loaded
-    var modalWrapElement = document.createElement('section')
-    modalWrapElement.setAttribute('id', 'modal-wrap')
-
-    var modalElement = document.createElement('div')
-    modalElement.setAttribute('id', 'modal')
-
-    var modalImageElement = document.createElement('img')
-    modalElement.setAttribute('id', 'modal-image')
-
-    var modalCloseButtonElement = document.createElement('h2')
-    var closeText = document.createTextNode('X')
-    modalCloseButtonElement.appendChild('closeText')
-    modalCloseButtonElement.setAttribute('id', 'modal-close-button')
-
+  
+    function getId(id) {
+        return document.getElementById(id)
+    }
+  
      //set variables for cleaner functions
     var modalWrap = getId('modal-wrap')
     var modal = getId('modal')
-    var images = getClasses('image')
+    var images = document.querySelectorAll('.images')
     var modalCloseButton = getId('modal-close-button')
     var modalImage = getId('modal-image')
 
@@ -30,39 +22,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //add event listener to close button
-    function closeListener() {
-        modalCloseButton
-            .addEventListener('click',
-                closeModal()
-            )
-    }
+    modalCloseButton.addEventListener('click',
+        function() {
+            return closeModal()
+        }
+    )
 
- //add src/link to image
+    //add src/link to image
     function addSrc(src) {
         return modalImage.setAttribute('src', src)
     }
-
- //helpers to find html elements
-    function getId(id) {
-        return document.getElementById(id)
-    }
-
-    function getClasses(className) {
-        return document.querySelectorAll('.' + className)
-    }
-
+  
     //add event listner to all images with class='images'
-    images.forEach(function(image) {
-        image.addEventListener('click',
-            function(e) {
-                console.log('clicked image')
-                var src = e.currentTarget.getAttribute('src')
-                addSrc(src)
-                openModal()
-                console.log('clicked image')
-            })
-    })
-
-
+    images.forEach(link => 
+        link.addEventListener('click', function(e){
+            openModal()
+            addSrc(e.currentTarget.getAttribute('src'))
+        })
+    )
+  
     //end 
 })
