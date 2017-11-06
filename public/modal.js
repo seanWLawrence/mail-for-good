@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     //start once page is loaded
+    var modalWrapElement = document.createElement('section')
+    modalWrapElement.setAttribute('id', 'modal-wrap')
 
-    //helpers to find html elements
-    function getId(id) {
-        return document.getElementById(id)
-    }
+    var modalElement = document.createElement('div')
+    modalElement.setAttribute('id', 'modal')
 
-    function getClasses(className) {
-        return document.querySelectorAll('.' + className)
-    }
+    var modalImageElement = document.createElement('img')
+    modalElement.setAttribute('id', 'modal-image')
 
-    //set variables for cleaner functions
+    var modalCloseButtonElement = document.createElement('h2')
+    var closeText = document.createTextNode('X')
+    modalCloseButtonElement.appendChild('closeText')
+    modalCloseButtonElement.setAttribute('id', 'modal-close-button')
+
+     //set variables for cleaner functions
     var modalWrap = getId('modal-wrap')
     var modal = getId('modal')
     var images = getClasses('image')
@@ -33,9 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
             )
     }
 
-    //add src/link to image
+ //add src/link to image
     function addSrc(src) {
         return modalImage.setAttribute('src', src)
+    }
+
+ //helpers to find html elements
+    function getId(id) {
+        return document.getElementById(id)
+    }
+
+    function getClasses(className) {
+        return document.querySelectorAll('.' + className)
     }
 
     //add event listner to all images with class='images'
@@ -46,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 var src = e.currentTarget.getAttribute('src')
                 addSrc(src)
                 openModal()
-                closeListener()
                 console.log('clicked image')
             })
     })
