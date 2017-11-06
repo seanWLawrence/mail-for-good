@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     //add event listner to all images with class='images'
-    images.forEach(link => 
+    images.forEach(function(link) {
         link.addEventListener('click', function(e){
             openModal()
             addSrc(e.currentTarget.getAttribute('src'))
         })
-    )
+    })
   
     //end 
 })
