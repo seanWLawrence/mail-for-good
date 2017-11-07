@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     //start once page is loaded
   
+  console.log('yo')
     function getId(id) {
         return document.getElementById(id)
     }
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
      //set variables for cleaner functions
     var modalWrap = getId('modal-wrap')
     var modal = getId('modal')
-    var images = document.querySelectorAll('.images')
+    var images = document.querySelectorAll('.image')
     var modalCloseButton = getId('modal-close-button')
     var modalImage = getId('modal-image')
 
@@ -43,3 +44,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
     //end 
 })
+
+
