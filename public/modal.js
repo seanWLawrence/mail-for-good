@@ -1,8 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     //start once page is loaded
-  
-  console.log('yo')
+
     function getId(id) {
         return document.getElementById(id)
     }
@@ -10,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
      //set variables for cleaner functions
     var modalWrap = getId('modal-wrap')
     var modal = getId('modal')
-    var images = document.getElementsByClassName('image')
     var modalCloseButton = getId('modal-close-button')
     var modalImage = getId('modal-image')
+    var images = document.querySelectorAll('.image')
 
     function openModal () {
         return modalWrap.style.display = 'flex'
@@ -35,13 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     //add event listner to all images with class='images'
-    images.forEach(function(link) { 
-        link.addEventListener('click', function(e) {
-            addSrc(e.currentTarget.getAttribute('src'))
-            openModal()
-        })             
-    }) 
-  
+        images.forEach(function(image) {
+            image.addEventListener('click', function(e) {
+                if(event.target.getAttribute('class') === 'image') {
+                    addSrc(e.currentTarget.getAttribute('src'))
+                    return openModal()
+                } else {
+                    return
+                }
+            })  
+        })
+
     //end 
 })
 

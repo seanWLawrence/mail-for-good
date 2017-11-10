@@ -1,8 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     //start once page is loaded
-  
-  console.log('yo')
+
     function getId(id) {
         return document.getElementById(id)
     }
@@ -35,17 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     //add event listner to all images with class='images'
-    images.forEach(function(image) {
-        image.addEventListener('click', function(e) {
-            if(event.target.getAttribute('class') === 'image') {
-                addSrc(e.currentTarget.getAttribute('src'))
-                return openModal()
-            } else {
-                return
-            }
-        })  
-    })
-  
+        images.forEach(function(image) {
+            image.addEventListener('click', function(e) {
+                if(event.target.getAttribute('class') === 'image') {
+                    addSrc(e.currentTarget.getAttribute('src'))
+                    return openModal()
+                } else {
+                    return
+                }
+            })  
+        })
+
     //end 
 })
 
