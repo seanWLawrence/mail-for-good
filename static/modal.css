@@ -12,22 +12,24 @@
 
 #modal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+ /* align-items: center;*/
 }
 
 #modal-image {
-  max-height: 90vh;
-  zoom: 200%;
+  max-height: 70vh;
+  margin: 5px auto;
+}
+#modal-close-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
-#modal-close-button {
-  position: absolute;
-  top: 0;
-  right: 30px;
+#modal-close-button h2 {
   color: #fff;
   cursor: pointer;
-  font-family: sans-serif;
-  font-size: 25px;
+  font-size: 50px;
+  font-weight: bold;
 }

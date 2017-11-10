@@ -18,13 +18,13 @@
 }
 
 #modal-image {
-  max-height: 90vh;
+  max-height: 70vh;
   zoom: 200%;
 }
 
 #modal-close-button {
   position: absolute;
-  top: 0;
+  top: 10vh;
   right: 30px;
   color: #fff;
   cursor: pointer;

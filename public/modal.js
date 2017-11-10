@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
      //set variables for cleaner functions
     var modalWrap = getId('modal-wrap')
     var modal = getId('modal')
-    var images = document.querySelectorAll('.image')
+    var images = document.getElementsByClassName('image')
     var modalCloseButton = getId('modal-close-button')
     var modalImage = getId('modal-image')
 
