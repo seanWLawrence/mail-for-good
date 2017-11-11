@@ -30,10 +30,11 @@
     justify-content: flex-end;
   }
 
-  #modal-close-button h2 {
+  #modal-close-button p {
     color: #fff;
     cursor: pointer;
     font-size: 50px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
 }
