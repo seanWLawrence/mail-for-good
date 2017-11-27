@@ -13,7 +13,7 @@ Looking to contribute? Read our [developer setup guide](/how-to-contribute).
 
 ---
 
-![Image showing Mail For Good](/hero.png)
+<img src="/hero.png" class='image'>
 
 An app for sending millions of emails as cheaply as possible. Mail for Good uses AWS Simple Email Service to send bulk emails at $0.10 per 1000 emails.
 

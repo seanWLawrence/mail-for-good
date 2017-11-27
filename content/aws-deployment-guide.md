@@ -7,65 +7,64 @@ date: 2017-09-30T16:52:32-05:00
 
 Right after you log in to AWS you will land on this page.
 
-![](/1.png)
-
+<img class='image' src='/1.png' />
 
 Scroll down until you see the "build a solution" box as below, then select "Launch a virtual machine".
 
-![](/2.png)
+<img class='image' src='/2.png' />
 
 Click on the "Get started" button in the "EC2 Instance" box.
 
-![](/3.png)
+<img class='image' src='/3.png' />
 
 Give your instance a name. In this example, we will go with "Mail-for-Good"
 
-![](/4.png)
+<img class='image' src='/4.png' />
 
 Select Ubuntu as your operating system.
 
-![](/5.png)
+<img class='image' src='/5.png' />
 
 Here is the preselected instance is fine. (t2.micro instances are eligible for the free tier).
 
-![](/6.png)
+<img class='image' src='/6.png' />
 
 AWS will now create an SSH key for your instance. You will need this file to login to the remote server.
 
 We will call this file `MfG-private-key`.
 
-![](/7.png)
+<img class='image' src='/7.png' />
 
 AWS will now create your instance.
 
-![](/8.png)
+<img class='image' src='/8.png' />
 
 You should see this when it's done.
 
-![](/9.png)
+<img src='/9.png' />
 
 
 ## Configure your AWS instance
 
 In the navbar at the top of the screen select "EC2" under the "Compute" category.
 
-![](/10.png)
+<img class='image' src='/10.png' />
 
 In the menu on the left of your screen, click on "Instances"
 
-![](/11.png)
+<img class='image' src='/11.png' />
 
 Then scroll the box containing the instances to the far right until you see "Security Groups".
 
-![](/13.png)
+<img class='image' src='/13.png' />
 
 Click on the security group of your instance and open the "Inbound" tab
 
-![](/14.png)
+<img class='image' src='/14.png' />
 
 then "Edit".
 
-![](/15.png)
+<img class='image' src='/15.png' />
 
 Add the following rule, as pictured:
 
@@ -82,35 +81,35 @@ By default AWS will allocate you a new address every time your instance starts u
 
 To get a  IP go to navbar -> EC2 -> left menu -> Elastic IPs.
 
-![](/navbar_ec2_elasticIP.png)
+<img class='image' src='/navbar_ec2_elasticIP.png' />
 
 Then click on "Allocate new address".
 
-![](/elastic_allocate_new.png)
+<img class='image' src='/elastic_allocate_new.png' />
 
 Once your Elastic IP is created click on Actions -> "Associate address".
 
-![](/elastic_associate.png)
+<img class='image' src='/elastic_associate.png' />
 
 Leave the Resource Type as its default ("Instance").
 
 Select the Instance you just created and its Private IP.
 
-![](/elastic_associate_conf.png)
+<img class='image' src='/elastic_associate_conf.png' />
 
 ## Connect to your new EC2 server
 
 In the navbar at the top of your screen select "EC2" under the "Compute" category.
 
-![](/10.png)
+<img class='image' src='/10.png' />
 
 In the menu on the left of your screen, click on "Instances".
 
-![](/11.png)
+<img class='image' src='/11.png' />
 
 Select your instance. Then take note of the "Public DNS (IPv4)" of your application. In this case, ours is "ec2-54-77-4-200.eu-west-1.compute.amazonaws.com".
 
-![](/12.png)
+<img class='image' src='/12.png' />
 
 ---
 
@@ -241,7 +240,7 @@ Select **Web Application**. Name it as you wish
   - Under **Authorised Javascript Origins** put the “Public DNS (IPv4)” you received from Amazon earlier.
   - Under **Authorised redirect URIs** put your “Public DNS (IPv4)” followed by `/auth/google/callback`.
 
-![](/google_origins.png)
+<img class='image' src='/google_origins.png' />
 
 **Any issues here? Double check that both URLs are preceeded with http://**.
 

@@ -633,6 +633,10 @@ pre {
     border-color: transparent rgba(0, 0, 0, .26);
     border-style: solid
 }*/
+.repo-stars a,
+.repo-download a {
+    color: #292f33;
+}
 
 .drawer {
     width: 262px;
@@ -892,7 +896,7 @@ pre span {
 .admonition {
     background: linear-gradient(#ffcc4d, #ffac33)
 ;
-    color: #fff
+    color: #292f33
 }
 
 .admonition pre {
