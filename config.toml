@@ -20,24 +20,26 @@ canonifyurls = true
 
 	permalink = "#"
 
-	# Custom assets
-	custom_css = ['modal.css']
-	custom_js  = ['modal.js']
+	# Custom assets, theme overrides
+	custom_css = ['/stylesheets/modal.css', '/stylesheets/misc.css', '/stylesheets/palettes.css', 'stylesheets/highlight/highlight.css']
+	custom_js  = ['/javascripts/modal.js']
 
+	# Color scheme
 	[params.palette]
     	primary = "green"
     	accent  = "yellow"
 
+	# Font
     [params.font]
     	text = "'Lato', sans-serif"
     	code = "Ubuntu Mono"
 
-
+# Social media links
 [social]
 	twitter = "freeCodeCamp"
 	github  = "freeCodeCamp/mail-for-good"
 
-
+# Sidebar menu
 [[menu.main]]
 	name   = "About"
 	url    = "/"
@@ -58,7 +60,7 @@ canonifyurls = true
 	url    = "license/"
 	weight = 30
 
-
+# Markdown settings
 [blackfriday]
 	smartypants	= true
 	fractions = true
