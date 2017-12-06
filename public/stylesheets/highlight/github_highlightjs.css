@@ -22,6 +22,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-selector-tag,
 .hljs-subst {
   color: #333;
+  font-weight: bold;
 }
 
 .hljs-number,
