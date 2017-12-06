@@ -119,43 +119,43 @@ Select your instance. Then take note of the "Public DNS (IPv4)" of your applicat
 
 Copy the private key you downloaded earlier and put it somewhere safe. By default, it will probably be in `~/Downloads`. You can check this with:
 
-``` Shell
+``` bash
 cd ~/Downloads && cat ./MfG-private-key.pem
 ```
 
 We'll assume this is true and copy the key to our home directory (you may wish to do otherwise, bear this in mind):
 
-``` Shell
+``` bash
 cp ~/Downloads/MfG-private-key.pem ~/
 ```
 
 Before using your key you will need to make it readable by running:
 
-``` Shell
+``` bash
 chmod 400 <path to your key>
 ```
 
 Which would be the following command for our example:
 
-``` Shell
+``` bash
 chmod 400 ~/MfG-private-key.pem
 ```
 
 Log into your instance:
 
-``` Shell
+``` bash
 ssh -i "<path to the key file you downloaded earlier>" ubuntu@<your Public DNS (IPv4) from Amazon>
 ```
 
 In our example we would use this command:
 
-``` Shell
+``` bash
 ssh -i "~/MfG-private-key.pem" ubuntu@ec2-54-77-4-200.eu-west-1.compute.amazonaws.com
 ```
 
 If everything went well so far you should see the following text:
 
-``` Shell
+``` bash
 Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1030-aws x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -193,13 +193,13 @@ You are now logged in to your instance.
 
 Update your package sources:
 
-``` Shell
+``` bash
 $ sudo apt-get update
 ```
 
 Install packages to allow `apt` to use a repository over HTTPS:
 
-``` Shell
+``` bash
 $ sudo apt-get install \
  apt-transport-https \
  ca-certificates \
@@ -209,13 +209,13 @@ $ sudo apt-get install \
 
 Add Docker’s official GPG key:
 
-``` Shell
+``` bash
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
 Install the docker version currently marked as "stable":
 
-``` Shell
+``` bash
 $ sudo add-apt-repository \
  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
  $(lsb_release -cs) \
@@ -224,7 +224,7 @@ $ sudo add-apt-repository \
 
 To install docker-compose run:
 
-``` Shell
+``` bash
 sudo apt-get install docker-compose
 ```
 
@@ -250,25 +250,25 @@ Click **Create**.
 
 Clone Mail-for-Good:
 
-``` Shell
+``` bash
 git clone https://github.com/freeCodeCamp/mail-for-good && cd mail-for-good
 ```
 
 Create a .env file:
 
-``` Shell
+``` bash
 cp .env.example .env
 ```
 
 Edit your .env according to the comments present in it:
 
-``` Shell
+``` bash
 nano .env
 ```
 
 In particular, you need to edit these four attributes:
 
-``` Shell
+``` bash
   # Your Google Client ID
   # E.g. 1234547812345-12345qrp123459bzcd12345660412345.apps.googleusercontent.com
 GOOGLE_CONSUMER_KEY=
@@ -290,7 +290,7 @@ Press CTRL+X to exit.
 
 All done! Run the command below and wait for it to finish. This may take some time:
 
-``` Shell
+``` bash
 sudo docker-compose up
 ```
 
