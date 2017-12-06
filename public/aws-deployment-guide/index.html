@@ -410,37 +410,37 @@ source: custom 0.0.0.0/0, ::/0
 
 <p>Copy the private key you downloaded earlier and put it somewhere safe. By default, it will probably be in <code>~/Downloads</code>. You can check this with:</p>
 
-<pre><code>cd ~/Downloads &amp;&amp; cat ./MfG-private-key.pem
+<pre><code class="language-Shell">cd ~/Downloads &amp;&amp; cat ./MfG-private-key.pem
 </code></pre>
 
 <p>We&rsquo;ll assume this is true and copy the key to our home directory (you may wish to do otherwise, bear this in mind):</p>
 
-<pre><code>cp ~/Downloads/MfG-private-key.pem ~/
+<pre><code class="language-Shell">cp ~/Downloads/MfG-private-key.pem ~/
 </code></pre>
 
 <p>Before using your key you will need to make it readable by running:</p>
 
-<pre><code>chmod 400 &lt;path to your key&gt;
+<pre><code class="language-Shell">chmod 400 &lt;path to your key&gt;
 </code></pre>
 
 <p>Which would be the following command for our example:</p>
 
-<pre><code>chmod 400 ~/MfG-private-key.pem
+<pre><code class="language-Shell">chmod 400 ~/MfG-private-key.pem
 </code></pre>
 
 <p>Log into your instance:</p>
 
-<pre><code>ssh -i &quot;&lt;path to the key file you downloaded earlier&gt;&quot; ubuntu@&lt;your Public DNS (IPv4) from Amazon&gt;
+<pre><code class="language-Shell">ssh -i &quot;&lt;path to the key file you downloaded earlier&gt;&quot; ubuntu@&lt;your Public DNS (IPv4) from Amazon&gt;
 </code></pre>
 
 <p>In our example we would use this command:</p>
 
-<pre><code>ssh -i &quot;~/MfG-private-key.pem&quot; ubuntu@ec2-54-77-4-200.eu-west-1.compute.amazonaws.com
+<pre><code class="language-Shell">ssh -i &quot;~/MfG-private-key.pem&quot; ubuntu@ec2-54-77-4-200.eu-west-1.compute.amazonaws.com
 </code></pre>
 
 <p>If everything went well so far you should see the following text:</p>
 
-<pre><code>Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1030-aws x86_64)
+<pre><code class="language-Shell">Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1030-aws x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -479,12 +479,12 @@ See &quot;man sudo_root&quot; for details.
 
 <p>Update your package sources:</p>
 
-<pre><code>$ sudo apt-get update
+<pre><code class="language-Shell">$ sudo apt-get update
 </code></pre>
 
 <p>Install packages to allow <code>apt</code> to use a repository over HTTPS:</p>
 
-<pre><code>$ sudo apt-get install \
+<pre><code class="language-Shell">$ sudo apt-get install \
  apt-transport-https \
  ca-certificates \
  curl \
@@ -493,12 +493,12 @@ See &quot;man sudo_root&quot; for details.
 
 <p>Add Docker’s official GPG key:</p>
 
-<pre><code>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+<pre><code class="language-Shell">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 </code></pre>
 
 <p>Install the docker version currently marked as &ldquo;stable&rdquo;:</p>
 
-<pre><code>$ sudo add-apt-repository \
+<pre><code class="language-Shell">$ sudo add-apt-repository \
  &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
  $(lsb_release -cs) \
  stable&quot;
@@ -506,7 +506,7 @@ See &quot;man sudo_root&quot; for details.
 
 <p>To install docker-compose run:</p>
 
-<pre><code>sudo apt-get install docker-compose
+<pre><code class="language-Shell">sudo apt-get install docker-compose
 </code></pre>
 
 <h3 id="get-set-up-with-google-authentication">Get set up with Google authentication</h3>
@@ -531,22 +531,22 @@ See &quot;man sudo_root&quot; for details.
 
 <p>Clone Mail-for-Good:</p>
 
-<pre><code>git clone https://github.com/freeCodeCamp/mail-for-good &amp;&amp; cd mail-for-good
+<pre><code class="language-Shell">git clone https://github.com/freeCodeCamp/mail-for-good &amp;&amp; cd mail-for-good
 </code></pre>
 
 <p>Create a .env file:</p>
 
-<pre><code>cp .env.example .env
+<pre><code class="language-Shell">cp .env.example .env
 </code></pre>
 
 <p>Edit your .env according to the comments present in it:</p>
 
-<pre><code>nano .env
+<pre><code class="language-Shell">nano .env
 </code></pre>
 
 <p>In particular, you need to edit these four attributes:</p>
 
-<pre><code>  # Your Google Client ID
+<pre><code class="language-Shell">  # Your Google Client ID
   # E.g. 1234547812345-12345qrp123459bzcd12345660412345.apps.googleusercontent.com
 GOOGLE_CONSUMER_KEY=
   # Your Client Secret
@@ -567,7 +567,7 @@ ENCRYPTION_PASSWORD=
 
 <p>All done! Run the command below and wait for it to finish. This may take some time:</p>
 
-<pre><code>sudo docker-compose up
+<pre><code class="language-Shell">sudo docker-compose up
 </code></pre>
 
 <p>Finally, close the terminal. Do not exit the app before doing so.</p>

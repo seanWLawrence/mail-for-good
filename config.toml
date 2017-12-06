@@ -21,8 +21,9 @@ canonifyurls = true
 	permalink = "#"
 
 	# Custom assets, theme overrides
-	custom_css = ['/stylesheets/modal.css', '/stylesheets/misc.css', '/stylesheets/palettes.css', 'stylesheets/highlight/highlight.css']
+	custom_css = ['/stylesheets/modal.css', '/stylesheets/misc.css', '/stylesheets/palettes.css']
 	custom_js  = ['/javascripts/modal.js']
+	highlight_css = "stylesheets/highlight/highlight.css"
 
 	# Color scheme
 	[params.palette]
@@ -33,6 +34,7 @@ canonifyurls = true
     [params.font]
     	text = "'Lato', sans-serif"
     	code = "Ubuntu Mono"
+
 
 # Social media links
 [social]
